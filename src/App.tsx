@@ -9,7 +9,9 @@ const App: React.FC = () => {
   let menuItems : MenuItemProps[] = [
     { name: 'Cheese Pizza', price: '$10', description: 'Mozzarella cheese, tomato sauce', imageUrl: 'src/assets/cheese-pizza.jpg' },
     { name: 'Meat Pizza', price: '$12', description: 'Pepperoni, sausage, bacon, mozzarella cheese, tomato sauce', imageUrl: 'src/assets/meat-pizza.jpg' },
-    { name: 'Supreme Pizza', price: '$15', description: 'Pepperoni, sausage, bell peppers, onions, mushrooms, mozzarella cheese, tomato sauce', imageUrl: 'src/assets/supreme-pizza.jpg' }
+    { name: 'Supreme Pizza', price: '$15', description: 'Pepperoni, sausage, bell peppers, onions, mushrooms, mozzarella cheese, tomato sauce', imageUrl: 'src/assets/supreme-pizza.jpg' },
+    { name: 'Big Mike', price: '$15', description: 'Fresh Mozzerella, Basil, Olive Oil, Blue Cheese, and Extra Crispy Bacon... No Red Sauce', imageUrl: 'src/assets/supreme-pizza.jpg' },
+    { name: 'Little Jo', price: '$12', description: 'Green Olives, Canadian Bacon, Sausage, and Fresh Basil', imageUrl: 'src/assets/supreme-pizza.jpg' },
    ]
 
   return (
@@ -25,8 +27,8 @@ const App: React.FC = () => {
           {/* Content section */}
           <section id="menu" className="mb-8 max-w-full">
             <div className="max-w-full">
-              <h2 className="text-3xl font-bold mb-4 text-red-500 text-center">Menu</h2>
-              <div className="max-w-full max-w-sm">
+              <h2 className="text-3xl max-w-full font-bold mb-4 text-red-500 text-center">Menu</h2>
+              <div className="grid grid-cols-2">
                 {
                   menuItems.map((item, index) => {
                     return <MenuItem key={index} name={item.name} price={item.price} description={item.description} imageUrl={item.imageUrl} />

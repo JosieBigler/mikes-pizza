@@ -14,10 +14,10 @@ export const MenuItem : FunctionComponent<MenuItemProps> = (props: MenuItemProps
             <div className="mb-8">
                 <div className='flex'>
                     <h3 className="flex-1 text-2xl font-bold mb-2">{props.name}</h3> 
-                    <p className="flex-1 flex text-lg font-semibold justify-end">{props.price}</p>
+                    <p className="flex-1 flex text-lg font-semibold justify-end pe-4">{props.price}</p>
 
                 </div>
-                <div className="border-t"></div>
+                <div className="border-t me-4" ></div>
                 <p className="text-lg">{props.description}</p>
             </div>
         </>
